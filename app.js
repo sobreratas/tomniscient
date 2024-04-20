@@ -7,7 +7,7 @@ const menuExpanded = document.querySelector(".menu-expanded");
 hamburgerContainer.addEventListener("click", () => {
   hamburgerContainer.classList.toggle("active");
   menuExpanded.classList.toggle("active");
-  hamburgerContainer.style.backgroundColor = "transparent";
+  // hamburgerContainer.style.backgroundColor = "transparent";
   body.classList.toggle("no-scroll");
 });
 
