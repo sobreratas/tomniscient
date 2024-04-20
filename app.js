@@ -1,22 +1,4 @@
-const headerSection = document.querySelector(".header-section");
 
-window.addEventListener("scroll", ()=> {
-  let offset = window.scrollY;
-  headerSection.style.backgroundPositionY = offset * 0.2 + 'px';
-})
-
-function changeHamburgerBackground() {
-  const hamburger = document.querySelector(".hamburger-container");
-  let scrollValue = window.scrollY;
-  console.log(scrollValue)
-  if (scrollValue > 800) {
-    hamburger.style.backgroundColor = "red";
-  } else {
-    hamburger.style.backgroundColor = "transparent";
-  }
-}
-
-window.addEventListener("scroll", changeHamburgerBackground);
 const body = document.querySelector("body");
 
 //Click on hamburger and expand menu
