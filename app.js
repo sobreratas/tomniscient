@@ -1,3 +1,44 @@
+const headerSection = document.querySelector(".header-section");
+
+window.addEventListener("scroll", ()=> {
+  let offset = window.scrollY;
+  headerSection.style.backgroundPositionY = offset * 0.2 + 'px';
+})
+
+function changeHamburgerBackground() {
+  const hamburger = document.querySelector(".hamburger-container");
+  let scrollValue = window.scrollY;
+  console.log(scrollValue)
+  if (scrollValue > 800) {
+    hamburger.style.backgroundColor = "red";
+  } else {
+    hamburger.style.backgroundColor = "transparent";
+  }
+}
+
+window.addEventListener("scroll", changeHamburgerBackground);
+const body = document.querySelector("body");
+
+//Click on hamburger and expand menu
+const hamburgerContainer = document.querySelector(".hamburger-container");
+const menuExpanded = document.querySelector(".menu-expanded");
+hamburgerContainer.addEventListener("click", () => {
+  hamburgerContainer.classList.toggle("active");
+  menuExpanded.classList.toggle("active");
+  hamburgerContainer.style.backgroundColor = "transparent";
+  body.classList.toggle("no-scroll");
+});
+
+//Click X to close menu
+const menuLinks = document.querySelectorAll(".menu-link");
+menuLinks.forEach((menuLink) => {
+  menuLink.addEventListener("click", () => {
+    hamburgerContainer.classList.toggle("active");
+    menuExpanded.classList.toggle("active");
+    body.classList.toggle("no-scroll");
+  });
+});
+
 //FADE IN - LEFT
 const fadeIn = document.querySelectorAll(".fade-in");
 

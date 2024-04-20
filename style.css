@@ -19,6 +19,108 @@ h2 {
   font-size: 3rem;
 }
 
+/*** HAMBURGER STYLES ***/
+.hamburger-container {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.3s ease-in-out;
+  z-index: 99999999;
+}
+
+.hamburger-container:hover {
+  cursor: pointer;
+}
+
+.bar {
+  background-color: #fff;
+  height: 3px;
+  width: 30px;
+  opacity: 0.8;
+  display: block;
+  margin: 0 auto;
+}
+
+.hamburger-container.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-container.active .bar:nth-child(1) {
+  width: 40px;
+  transform: translateY(12px) rotate(45deg) translateX(0px);
+  transition: transform 0.3s;
+  background-color: #fff;
+}
+
+.hamburger-container.active .bar:nth-child(3) {
+  width: 40px;
+  transform: translateY(-13px) rotate(-45deg);
+  transition: transform 0.3s;
+  background-color: #fff;
+}
+
+/* MENU EXPANDED STYLES */
+.no-scroll {
+  overflow: hidden;
+}
+
+.menu-expanded {
+  opacity: 0;
+  height: 100vh;
+  background-image: url("images/black-texture-background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -111;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.menu-expanded img {
+  width: 25%;
+}
+
+.menu-expanded.active {
+  z-index: 9999999;
+  opacity: 1;
+}
+
+.menu-expanded ul {
+  margin-top: 100px;
+  text-align: center;
+  color: #fff;
+}
+
+.menu-expanded ul li {
+  list-style: none;
+  margin: 20px;
+  font-weight: 600;
+}
+
+.menu-expanded ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.menu-expanded ul li a:hover {
+  cursor: pointer;
+  color: #959595;
+  transition: 0.3s ease-in;
+}
+
 /* HEADER */
 .header-section {
   position: relative;
@@ -31,12 +133,16 @@ h2 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 
 @media screen and (max-width: 400px) {
   .header-section {
     background-attachment: scroll;
+  }
+
+  .menu-expanded img {
+    width: 250px;
   }
 }
 
