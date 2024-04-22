@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
       nextButton.style.background = "gray";
 
     }
-      if (currentIndex >= 4) {
+      if (currentIndex >= 1) {
           return;
       } else {
           currentIndex++;
