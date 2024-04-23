@@ -140,6 +140,41 @@ h2 {
   position: relative;
 }
 
+.top-left-social-icons {
+  margin: 0 8px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.top-left-social-icons i {
+  color: #fff;
+  opacity: 0.8;
+  font-size: 36px;
+  margin: 0px 12px;
+}
+
+.menu-social-icons {
+  color: #fff;
+  font-size: 26px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.menu-social-icons i {
+  color: #fff;
+  font-size: 26px;
+  margin: 20px 8px;
+}
+
+.top-left-social-icons i:hover,
+.menu-social-icons i:hover {
+  cursor: pointer;
+  filter: brightness(75%);
+  transition: 0.3s ease-in-out;
+}
+
 .logo {
   width: 100%;
   position: absolute;
@@ -169,8 +204,15 @@ h2 {
   .menu-expanded img {
     width: 250px;
   }
-}
 
+  .top-left-social-icons {
+    visibility: hidden;
+  }
+
+  /* .menu-social-icons {
+    visibility: visible;
+  } */
+}
 
 @keyframes logoFadeIn {
   from {
@@ -179,21 +221,6 @@ h2 {
 
   to {
     opacity: 1;
-  }
-}
-
-.spirograph {
-  max-height: 100vh;
-  animation: rotate360 60s linear infinite, grayscaleToColor linear 1.2s;
-}
-
-@keyframes rotate360 {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
   }
 }
 
@@ -326,7 +353,7 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 1);
 }
 
 .snake-container img {
@@ -628,7 +655,7 @@ h2 {
 .next-button {
   width: 50px;
   height: 50px;
- 
+
   background: #fff;
   border: none;
   cursor: pointer;
@@ -673,6 +700,54 @@ h2 {
   .prev-button,
   .next-button {
     display: none;
+  }
+}
+
+/*** CONTACT STYLES ***/
+.contact-container {
+  background-color: rgb(18, 18, 18);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-container h2 {
+  margin-top: 30px;
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+  padding: 40px;
+}
+
+.contact-container form input {
+  padding: 6px;
+}
+
+.contact-container form button {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  background-color: transparent;
+  color: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+}
+
+.label-input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 400px) {
+  .contact-container form {
+    width: 100%;
   }
 }
 
