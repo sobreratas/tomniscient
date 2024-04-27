@@ -635,7 +635,6 @@ h2 {
 
 .carousel {
   display: flex;
-  gap: 15px;
   transition: transform 0.5s ease;
 }
 
@@ -648,6 +647,7 @@ h2 {
 }
 
 .slide img {
+  padding: 15px;
   width: 100%;
 }
 

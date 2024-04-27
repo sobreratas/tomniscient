@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
           return;
       } else {
           console.log()
-          currentPercentage -= 26.5
+          currentPercentage -= 25
           carousel.style.transform = `translateX(${currentPercentage}%)`;
       }  
   }
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if(currentIndex < 0){
           return;
       } else {
-          currentPercentage += 26.5
+          currentPercentage += 25
           carousel.style.transform = `translateX(${currentPercentage}%)`;
       }  
   }
