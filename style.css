@@ -523,7 +523,7 @@ h2 {
 
 /* RELEASES */
 #releases-section {
-  padding-top: 40px;
+  /* padding-top: 40px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -629,7 +629,6 @@ h2 {
 .carousel-container {
   position: relative;
   width: 100%;
-  /* overflow: scroll; */
   margin-bottom: 40px;
 }
 
