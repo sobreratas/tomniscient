@@ -175,12 +175,12 @@ const slideContainer = document.querySelector(".slide-container");
 const indicatorContainer = document.querySelector(".indicator-container");
 
 const images = [
-    { path: 'images/Tomniscient-Snake.jpg' },
-    { path: 'images/Tomniscient-Black.jpg' },
-    { path: 'images/Tomniscient-White.jpg' },
-    { path: 'images/Tomniscient-Red.jpg' },
-    { path: 'images/Tomniscient-Blue.jpg' },
-    { path: 'images/Tomniscient-Purple.jpg' },
+    { path: 'images/tom-1.jpg' },
+    { path: 'images/tom-2.jpg' },
+    { path: 'images/tom-3.jpg' },
+    { path: 'images/tom-4.jpg' },
+    { path: 'images/tom-5.jpg' },
+    { path: 'images/tom-6.jpg' },
 
 ];
 
